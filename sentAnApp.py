@@ -16,8 +16,8 @@ st.markdown(
 
 st.markdown(
         """
-### This simple application is an assignment submission for the Omdena School's Sentiment Analysis course     entitled "Mastering Sentiment Analysis - Building a Powerful web application".
-### It uses the  VADER package for sentiment analysis.
+This simple application is an assignment submission for the Omdena School's Sentiment Analysis course     entitled "Mastering Sentiment Analysis - Building a Powerful web application".
+It uses the  VADER package for sentiment analysis.
 """
     )
 
