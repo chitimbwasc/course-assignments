@@ -1,3 +1,4 @@
 streamlit==1.25.0
 vaderSentiment==3.3.2
 vaderSentiment==3.3.2
+gTTs==2.4.0
