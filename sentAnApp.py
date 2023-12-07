@@ -6,6 +6,7 @@
 import streamlit as st
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 import time as tm
+from gtts import gTTS
 
 st.markdown(
         """
@@ -41,7 +42,8 @@ def main():
             st.markdown('''side of the sentiment spectrum.''')
             st.markdown(":+1::+1::+1::+1::+1::+1::+1::+1:")
             st.balloons()
-           
+            st.markdown('''Audi version of feedback.''')
+            audio_out(result)
             
 
         elif result == "Negative" :
@@ -50,14 +52,16 @@ def main():
             st.markdown('''side of the sentiment spectrum.''')
             st.markdown(":-1::-1::-1::-1::-1::-1::-1::-1:")
             st.snow()
-           
+            st.markdown('''Audi version of feedback.''')
+            audio_out(result)
 
         else :
             st.markdown('''The input text is on the''')
             st.success(result)
             st.markdown('''portion of the sentiment spectrum.''')
             st.markdown(":ok_hand::ok_hand::ok_hand::ok_hand::ok_hand::ok_hand::ok_hand::ok_hand:")
-            
+            st.markdown('''Audi version of feedback.''')
+            audio_out(result)
 
 @st.cache_data
 def sentiment_analyzer(text):
@@ -80,7 +84,13 @@ def sentiment_analyzer(text):
         
     # Return the response 
     return sentiment_response
-    
+
+def audio_out(outcome):
+    language = 'en'
+    result_text = f"The input text is on the {outcome} side of the sentiment spectrum."
+    g_obj = gTTS(text = result_text, lang = language, slow = False)
+    g_obj.save('gtts.wav')
+    st.audio('gtts.wav')
   
 main()
 
