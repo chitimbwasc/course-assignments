@@ -43,7 +43,7 @@ def main():
             st.markdown(":+1::+1::+1::+1::+1::+1::+1::+1:")
             st.balloons()
             st.markdown('''Audi version of feedback.''')
-            audio_out(result)
+            audio_out(text)
             
 
         elif result == "Negative" :
@@ -53,7 +53,7 @@ def main():
             st.markdown(":-1::-1::-1::-1::-1::-1::-1::-1:")
             st.snow()
             st.markdown('''Audi version of feedback.''')
-            audio_out(result)
+            audio_out(text)
 
         else :
             st.markdown('''The input text is on the''')
@@ -61,7 +61,7 @@ def main():
             st.markdown('''portion of the sentiment spectrum.''')
             st.markdown(":ok_hand::ok_hand::ok_hand::ok_hand::ok_hand::ok_hand::ok_hand::ok_hand:")
             st.markdown('''Audi version of feedback.''')
-            audio_out(result)
+            audio_out(text)
 
 @st.cache_data
 def sentiment_analyzer(text):
