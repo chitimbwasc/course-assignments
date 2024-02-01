@@ -32,7 +32,10 @@ def main():
     text = st.text_area("Write your text")
 
     if st.button("Submit"):
-        result = sentiment_analyzer(text)
+        # result = sentiment_analyzer(text)
+
+#TEST CODE
+result = text
 
         # decide sentiment as positive, negative and neutral
         if result == "Positive" :
@@ -53,7 +56,7 @@ def main():
             st.markdown(":-1::-1::-1::-1::-1::-1::-1::-1:")
             st.snow()
             st.markdown('''Audi version of feedback.''')
-            audio_out(text)
+            audio_out(result)
 
         else :
             st.markdown('''The input text is on the''')
@@ -61,7 +64,7 @@ def main():
             st.markdown('''portion of the sentiment spectrum.''')
             st.markdown(":ok_hand::ok_hand::ok_hand::ok_hand::ok_hand::ok_hand::ok_hand::ok_hand:")
             st.markdown('''Audi version of feedback.''')
-            audio_out(text)
+            audio_out(result)
 
 @st.cache_data
 def sentiment_analyzer(text):
