@@ -35,7 +35,7 @@ def main():
         # result = sentiment_analyzer(text)
 
 #TEST CODE
-result = text
+         result = text
 
         # decide sentiment as positive, negative and neutral
         if result == "Positive" :
