@@ -90,7 +90,8 @@ def sentiment_analyzer(text):
 
 def audio_out(outcome):
     language = 'en'
-    result_text = f"The input text is on the {outcome} side of the sentiment spectrum."
+    result_text = outcome
+   # result_text = f"The input text is on the {outcome} side of the sentiment spectrum."
     g_obj = gTTS(text = result_text, lang = language, slow = False)
     g_obj.save('gtts.wav')
     st.audio('gtts.wav')
