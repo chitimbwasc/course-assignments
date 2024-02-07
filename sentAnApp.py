@@ -36,10 +36,10 @@ def main():
 
 #TEST CODE
          
-    text = st.text_area("Write your text")
+    text1 = st.text_area("Write your text")
 
     if st.button("Submit"):
-        result = sentiment_analyzer(text)
+        result = sentiment_analyzer(text1)
 
         # decide sentiment as positive, negative and neutral
         if result == "Positive" :
