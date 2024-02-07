@@ -35,7 +35,11 @@ def main():
         result = sentiment_analyzer(text)
 
 #TEST CODE
-         #result = text
+         
+    text = st.text_area("Write your text")
+
+    if st.button("Submit"):
+        result = sentiment_analyzer(text)
 
         # decide sentiment as positive, negative and neutral
         if result == "Positive" :
