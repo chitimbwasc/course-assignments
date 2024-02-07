@@ -42,29 +42,29 @@ def main():
         # decide sentiment as positive, negative and neutral
         if result == "Positive" :
             st.text('')
-            st.markdown('''The input text is on the''')
+            # st.markdown('''The input text is on the''')
             st.success(result)
-            st.markdown('''side of the sentiment spectrum.''')
-            st.markdown(":+1::+1::+1::+1::+1::+1::+1::+1:")
+           #  st.markdown('''side of the sentiment spectrum.''')
+            # st.markdown(":+1::+1::+1::+1::+1::+1::+1::+1:")
             st.balloons()
             st.markdown('''Audi version of feedback.''')
             audio_out(text)
             
 
         elif result == "Negative" :
-            st.markdown('''The input text is on the''')
+            # st.markdown('''The input text is on the''')
             st.warning(result)
-            st.markdown('''side of the sentiment spectrum.''')
-            st.markdown(":-1::-1::-1::-1::-1::-1::-1::-1:")
+            # st.markdown('''side of the sentiment spectrum.''')
+            # st.markdown(":-1::-1::-1::-1::-1::-1::-1::-1:")
             st.snow()
-            st.markdown('''Audi version of feedback.''')
+            # st.markdown('''Audi version of feedback.''')
             audio_out(result)
 
         else :
-            st.markdown('''The input text is on the''')
+            # st.markdown('''The input text is on the''')
             st.success(result)
-            st.markdown('''portion of the sentiment spectrum.''')
-            st.markdown(":ok_hand::ok_hand::ok_hand::ok_hand::ok_hand::ok_hand::ok_hand::ok_hand:")
+            # st.markdown('''portion of the sentiment spectrum.''')
+            # st.markdown(":ok_hand::ok_hand::ok_hand::ok_hand::ok_hand::ok_hand::ok_hand::ok_hand:")
             st.markdown('''Audi version of feedback.''')
             audio_out(result)
 
