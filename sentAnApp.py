@@ -8,19 +8,31 @@ from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 import time as tm
 from gtts import gTTS
 
-st.markdown(
+# st.markdown(
         """
 # Sentiment Mining App
 
 """
     )
 
-st.markdown(
+#### Added ####
+
+st.markdoen(""" # Text to Audio Converter "")
+
+##############
+
+# st.markdown(
         """
 This simple application is an assignment submission for the Omdena School's Sentiment Analysis course     entitled "Mastering Sentiment Analysis - Building a Powerful web application".
 It uses the  VADER package for sentiment analysis.
 """
     )
+
+#########
+
+st.markdown(""" This trivial application converts input text into audio that can be played back """)
+
+##########
 
 
 def main():
@@ -43,29 +55,29 @@ def main():
         if result == "Positive" :
             st.text('')
             # st.markdown('''The input text is on the''')
-            st.success(result)
+            # st.success(result)
            #  st.markdown('''side of the sentiment spectrum.''')
             # st.markdown(":+1::+1::+1::+1::+1::+1::+1::+1:")
             st.balloons()
-            st.markdown('''Audi version of feedback.''')
+            st.markdown('''Audio playback.''')
             audio_out(text)
             
 
         elif result == "Negative" :
             # st.markdown('''The input text is on the''')
-            st.warning(result)
+            # st.warning(result)
             # st.markdown('''side of the sentiment spectrum.''')
             # st.markdown(":-1::-1::-1::-1::-1::-1::-1::-1:")
             st.snow()
-            # st.markdown('''Audi version of feedback.''')
+            # st.markdown('''Audio playback.''')
             audio_out(result)
 
         else :
             # st.markdown('''The input text is on the''')
-            st.success(result)
+            # st.success(result)
             # st.markdown('''portion of the sentiment spectrum.''')
             # st.markdown(":ok_hand::ok_hand::ok_hand::ok_hand::ok_hand::ok_hand::ok_hand::ok_hand:")
-            st.markdown('''Audi version of feedback.''')
+            st.markdown('''Audio playback.''')
             audio_out(result)
 
 @st.cache_data
