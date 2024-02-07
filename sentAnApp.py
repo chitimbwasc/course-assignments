@@ -8,12 +8,12 @@ from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 import time as tm
 from gtts import gTTS
 
-# st.markdown(
+/* st.markdown(
         """
 # Sentiment Mining App
 
 """
-    )
+    )*/
 
 #### Added ####
 
